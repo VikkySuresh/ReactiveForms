@@ -1,0 +1,24 @@
+<div class= "employee-details-table">
+<h3> Employee Details</h3>
+  <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Age</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor = "let employee of employees;let index=index;">
+          <td>{{ employee.firstname }}</td>
+          <td>{{ employee.lastname }}</td>
+          <td>{{ employee.age }}</td>
+          <td>
+  	        <span class="glyphicon glyphicon-edit" (click) = "editEmployee(index)"></span>
+  	        <span class="glyphicon glyphicon-trash" (click) = "removeEmployee(index)"></span>
+          </td>
+        </tr>
+      </tbody>
+  </table>
+</div>
