@@ -1,6 +1,6 @@
+import { Component, NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { By } from "@angular/platform-browser";
 import { AppEmployeeDetailsComponent } from './app-employee-details.component';
 import { Employee } from '../shared/employee.model';
 import { EmployeeService } from '../shared/employee.service';
@@ -15,7 +15,8 @@ describe('AppEmployeeDetailsComponent', () => {
     TestBed.configureTestingModule({
       declarations: [ AppEmployeeDetailsComponent ],
       imports: [FormsModule, ReactiveFormsModule],
-      providers: [EmployeeService]     
+      providers: [EmployeeService],
+      schemas: [ NO_ERRORS_SCHEMA ]
     })
     .compileComponents();
   }));
