@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Employee } from '../shared/employee.model';
 import { EmployeeService } from '../shared/employee.service';
 
@@ -21,7 +21,7 @@ export class AppEmployeeDetailsComponent implements OnInit {
     age: ['', [Validators.required]]
     })
   }
-  onSubmit(employee: Employee[]) {
+  onSubmit(employee) {
     this.employees = this.employeeService.addNewEmployee(employee);
     this.employeeForm.reset();
   }
